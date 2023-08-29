@@ -23,7 +23,7 @@ def is_in_range(r_g_b: list) -> bool:
 def rgbToHex(r: int, g: int, b: int) -> str:
     hex_string = ""
     # check if RGB values are between 0 and 255
-    if is_in_range(r, g, b):
+    if is_in_range([r, g, b]):
         hex_string = format(r, '02X') + format(g, '02X') + format(b, '02X') 
 
     return hex_string
