@@ -11,7 +11,7 @@ def is_in_range(r_g_b: list) -> bool:
             # if a number is less than 0, treat it as a zero
             if num < 0:
                 num = 0
-            if num > 255:
+            elif num > 255:
                 num = 255
             
             results.append(True if 0 <= num <= 255 else False)
@@ -26,7 +26,7 @@ def rgbToHex(r: int, g: int, b: int) -> str:
     hex_string = ""
     # check if RGB values are between 0 and 255
     if is_in_range([r, g, b]):
-        hex_string = format(r, '02X') + format(g, '02X') + format(b, '02X') 
+        hex_string = format(abs(r), '02X') + format(abs(g), '02X') + format(abs(b), '02X') 
 
     return hex_string
 
